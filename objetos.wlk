@@ -13,6 +13,13 @@ object lionel {
 	method avanzar() {
 		position = game.at((game.width() - 1).min(position.x() + 1), position.y())
 	}
+
+	method taquito() {
+	  self.validarPosicionDePelota()
+	  pelota.position(game.at(0.max(position.x() - 2), position.y()))
+	  //		cero es el borde izquierdo del tablero, entonces al llegar al borde decide entre
+	  // cero y 2, cual es el maximo que puede moverse. 
+	}
 	
 	method cambiarCamiseta() {
 		self.validarPosicionDeCambio()
@@ -63,5 +70,5 @@ object pelota {
 	
 	method patear() {
 		position = game.at((game.width() - 1).min(position.x() + 3), position.y())
-	}
+	}	
 }
