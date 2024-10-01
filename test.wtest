@@ -1,0 +1,7 @@
+import objetos.*
+import wollok.game.*
+describe "fulbito" {
+	test "inicio"{
+		
+		}
+}
